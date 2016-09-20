@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <classPathEntry location="E:/lib/mysql-connector-java-5.1.15-bin.jar" />
+
+  <context id="Mysql5Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+       connectionURL="jdbc:mysql://192.168.0.10:3306/zsyy-zjet"
+        userId="ucmed"
+        password="csyz1573@mysql">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+<!-- F:\work\workspace_svn\huatuo-common-dal\src\main\java -->
+    <!-- <javaModelGenerator targetPackage="com.ucmed.dbyj.dataobject" targetProject="F:\work\workspace_svn\mybatis_generator\src">
+      <property name="enableSubPackages" value="false" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator> -->
+    <javaModelGenerator targetPackage="com.ucmed.common.dao.demo6" targetProject="E:\workspace_luna\mybatis_generator\src">
+      <property name="enableSubPackages" value="false" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.ucmed.common.dao.demo6"  targetProject="E:\workspace_luna\mybatis_generator\src">
+      <property name="enableSubPackages" value="false" />
+    </javaClientGenerator>
+ 
+    <table tableName="abnormal_bill"
+    	enableSelectByExample="false"
+    	enableDeleteByExample="false"
+    	enableCountByExample="false"
+    	enableUpdateByExample="false"
+    	selectByExampleQueryId="false"
+    	domainObjectName="AbnormalBill" >
+    <!--   <generatedKey column="id" sqlStatement="MySql" identity="true" /> -->
+    </table>
+
+  </context>
+</generatorConfiguration>

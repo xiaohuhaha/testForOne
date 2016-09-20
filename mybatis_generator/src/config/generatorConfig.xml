@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <classPathEntry location="F:/work/实习/documents/修改文档/mybatis-generator-core-1.3.1/mysql-connector-java-5.1.15-bin.jar" />
+
+  <context id="Mysql5Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://localhost:3306/huatuo"
+        userId="root"
+        password="shiny">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+<!-- F:\work\workspace_svn\huatuo-common-dal\src\main\java -->
+    <javaModelGenerator targetPackage="net.hidev.huatuo.common.dal.dataobject" targetProject="F:\work\workspace_svn\mybatis_generator\src">
+      <property name="enableSubPackages" value="false" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+   <!--  <javaModelGenerator targetPackage="net.hidev.huatuo.core.model" targetProject="F:\work\workspace_svn\mybatis_generator\src">
+      <property name="enableSubPackages" value="false" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator> -->
+
+    <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="net.hidev.huatuo.common.dal.dao"  targetProject="F:\work\workspace_svn\mybatis_generator\src">
+      <property name="enableSubPackages" value="false" />
+    </javaClientGenerator>
+ 
+ 	<table tableName="consult_order_user"
+    	enableSelectByExample="false"
+    	enableDeleteByExample="false"
+    	enableCountByExample="false"
+    	enableUpdateByExample="false"
+    	selectByExampleQueryId="false"
+    	domainObjectName="OrderUser" >
+      <generatedKey column="id" sqlStatement="MySql" identity="true" />
+    </table>
+  </context>
+</generatorConfiguration>

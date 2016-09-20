@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <classPathEntry location="D:/mybatis/mysql-connector-java-5.1.15-bin.jar" />
+
+  <context id="Mysql5Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://192.168.0.119:3306/qjwb"
+        userId="test"
+        password="ucmed2010">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="dataobject" targetProject="D:\mybatis\src">
+      <property name="enableSubPackages" value="false" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="dao"  targetProject="D:\mybatis\src">
+      <property name="enableSubPackages" value="false" />
+    </javaClientGenerator>
+    
+    <table tableName="win_prize"
+    	enableSelectByExample="false"
+    	enableDeleteByExample="false"
+    	enableCountByExample="false"
+    	enableUpdateByExample="false"
+    	selectByExampleQueryId="false"
+    	domainObjectName="WinPrize">
+      <generatedKey column="id" sqlStatement="MySql" identity="true" />
+    </table>
+  </context>
+</generatorConfiguration>
